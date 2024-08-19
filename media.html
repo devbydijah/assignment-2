@@ -3,25 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Me</title>
+    <title>Media</title>
+    <link rel="stylesheet" href="media.css" />
   </head>
   <body>
-    <header>
-      <h1>About Me</h1>
+    <!-- Header with title and navigation -->
+    <header id="header">
+      <!-- Main title for the page -->
+      <h1 id="page-title">About Me</h1>
+      <!-- Navigation menu for site navigation -->
+      <nav id="main-nav">
+        <ul class="nav-list">
+          <!-- Navigation links to other pages -->
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="form.html">Application Form</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="table.html">Courses and Schools</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="media.html">Media</a>
+          </li>
+        </ul>
+      </nav>
     </header>
-    <main>
-      <section>
-        <h2>ALT SCHOOL ID:</h2>
-        <p>ALT/SOE/024/0275</p>
-        <p>
+
+    <!-- Main content of the page -->
+    <main id="main-content">
+      <!-- Personal information section -->
+      <section id="personal-info">
+        <h2 class="section-title">ALT SCHOOL ID:</h2>
+        <p class="text-content">ALT/SOE/024/0275</p>
+        <p class="text-content">
           I'm the youngest of five sisters, and I'm from the awesome city of
           Kano in Nigeria. Growing up with all those amazing sisters was quite
           an experience.
         </p>
       </section>
-      <section>
-        <h2>My Tech Journey: A Bit Unexpected, But Totally Awesome</h2>
-        <p>
+
+      <!-- Tech journey section -->
+      <section id="tech-journey">
+        <h2 class="section-title">
+          My Tech Journey: A Bit Unexpected, But Totally Awesome
+        </h2>
+        <p class="text-content">
           My love for computers started when I was a teenager. I was always
           curious about how websites and apps worked, so I started learning more
           about it. After attending a coding bootcamp, I knew I had found my
@@ -29,9 +57,11 @@
           stuff that could actually help people.
         </p>
       </section>
-      <section>
-        <h2>Life Beyond the Keyboard</h2>
-        <p>
+
+      <!-- Hobbies and interests section -->
+      <section id="hobbies-interests">
+        <h2 class="section-title">Life Beyond the Keyboard</h2>
+        <p class="text-content">
           Besides coding, I love reading, hiking, doing yoga, and checking out
           the latest tech gadgets. I even like to play around with website
           builders like Wix. Writing is another one of my passions, especially
@@ -39,9 +69,11 @@
           creative juices flowing.
         </p>
       </section>
-      <section>
-        <h2>My Dream: Tech for a Better World</h2>
-        <p>
+
+      <!-- Career aspirations section -->
+      <section id="career-aspirations">
+        <h2 class="section-title">My Dream: Tech for a Better World</h2>
+        <p class="text-content">
           My big dream is to combine my love for technology with my passion for
           peacebuilding. I want to create tools and platforms that help
           communities, especially in Africa, to connect, communicate, and
@@ -50,9 +82,11 @@
           need, we can create a brighter future for everyone.
         </p>
       </section>
-      <section>
-        <h2>Always Learning and Giving Back</h2>
-        <p>
+
+      <!-- Ongoing learning and community service section -->
+      <section id="learning-service">
+        <h2 class="section-title">Always Learning and Giving Back</h2>
+        <p class="text-content">
           I'm always looking for new ways to learn and grow, whether it's by
           taking online courses, attending workshops, or reading up on the
           latest tech trends. I also believe in giving back to my community,
@@ -60,18 +94,27 @@
           and technology.
         </p>
       </section>
-      <section>
-        <h2>Profile Picture</h2>
+
+      <!-- Profile picture section -->
+      <section id="profile-picture">
+        <h2 class="section-title">Profile Picture</h2>
         <picture>
-          <source srcset="asset\images\me-800.jpg" media="(min-width: 800px)" />
-          <source srcset="asset\images\me-600.jpg" media="(min-width: 600px)" />
-          <source srcset="asset\images\me-200.jpg" media="(max-width: 200px)" />
-          <img src="asset\images\me.jpg" alt="A picture of me" />
+          <!-- Responsive image sources for different screen sizes -->
+          <source srcset="asset/images/me-800.jpg" media="(min-width: 800px)" />
+          <source srcset="asset/images/me-600.jpg" media="(min-width: 600px)" />
+          <source srcset="asset/images/me-200.jpg" media="(max-width: 200px)" />
+          <img
+            src="asset/images/me.jpg"
+            alt="A picture of me"
+            class="profile-img"
+          />
         </picture>
       </section>
-      <section>
-        <h2>Frontend Software Engineering</h2>
-        <p>
+
+      <!-- Section for explaining frontend software engineering -->
+      <section id="frontend-engineering">
+        <h2 class="section-title">Frontend Software Engineering</h2>
+        <p class="text-content">
           Frontend software engineering involves the development of the user
           interface (UI) and user experience (UX) of websites and applications.
           This field focuses on creating visually appealing and intuitive
@@ -84,25 +127,34 @@
           The video will talk more about frontend software engineering and its
           importance in modern web development.
         </p>
-        <video width="320" height="240" controls>
-          <source src="asset\videos\frontend-video-1.mp4" type="video/mp4" />
-          <source src="asset\videos\frontend-video-2.webm" type="video/webm" />
+        <!-- Video explaining frontend software engineering -->
+        <video class="video-content" width="320" height="240" controls>
+          <source src="asset/videos/frontend-video-1.mp4" type="video/mp4" />
+          <source src="asset/videos/frontend-video-2.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
       </section>
-      <section>
-        <h2>Background Music</h2>
-        <p>Listen to this cinematic intro music while reading the rest of the content.</p>
-        <audio controls>
-          <source src="asset\audios\cinematic-intro-2.ogg" type="audio/ogg" />
-          <source src="asset\audios\cinematic-intro-1.mp3" type="audio/mpeg" />
+
+      <!-- Section for background music -->
+      <section id="background-music">
+        <h2 class="section-title">Background Music</h2>
+        <p class="text-content">
+          Listen to this cinematic intro music while reading the rest of the
+          content.
+        </p>
+        <audio class="audio-content" controls>
+          <source src="asset/audios/cinematic-intro-2.ogg" type="audio/ogg" />
+          <source src="asset/audios/cinematic-intro-1.mp3" type="audio/mpeg" />
           Your browser does not support the audio element.
-        </audio>        
+        </audio>
       </section>
-      <section>
-        <h2>Embedded Content</h2>
-        <p>Check out this YouTube video about iframes.</p>
+
+      <!-- Section for embedded content -->
+      <section id="embedded-content">
+        <h2 class="section-title">Embedded Content</h2>
+        <p class="text-content">Check out this YouTube video about iframes.</p>
         <iframe
+          class="embedded-video"
           width="560"
           height="315"
           src="https://www.youtube.com/embed/qP23O70ve7k?si=BAxfF6hSS7rwU3G0"
