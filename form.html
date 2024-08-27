@@ -13,27 +13,20 @@
   </head>
   <body>
     <!-- Header section containing the navigation bar -->
-    <header id="top">
-      <nav id="main-nav">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a class="nav-link" href="about.html#top">About Me</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="form.html#top">Application Form</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="table.html#top">Table</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="media.html#top">Media</a>
-          </li>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html#top">About Me</a></li>
+          <li><a href="form.html#top">Application Form</a></li>
+          <li><a href="table.html#top">Courses and Schoolse</a></li>
+          <li><a href="media.html#top">Media</a></li>
         </ul>
       </nav>
     </header>
 
     <!-- Main content section of the page -->
-    <main id="main-content">
+    <main>
+      <!-- Application form section -->
       <section>
         <h1>Signup</h1>
         <p>Take the next steps to apply at AltSchool Africa</p>
@@ -104,7 +97,6 @@
             <option value="" disabled selected hidden>
               Select your country
             </option>
-            <!-- List of countries -->
             <option value="Afghanistan">Afghanistan</option>
             <option value="Albania">Albania</option>
             <option value="Algeria">Algeria</option>
@@ -275,6 +267,7 @@
             <option value="Solomon Islands">Solomon Islands</option>
             <option value="Somalia">Somalia</option>
             <option value="South Africa">South Africa</option>
+            <option value="South Korea">South Korea</option>
             <option value="South Sudan">South Sudan</option>
             <option value="Spain">Spain</option>
             <option value="Sri Lanka">Sri Lanka</option>
@@ -287,7 +280,6 @@
             <option value="Tajikistan">Tajikistan</option>
             <option value="Tanzania">Tanzania</option>
             <option value="Thailand">Thailand</option>
-            <option value="Timor-Leste">Timor-Leste</option>
             <option value="Togo">Togo</option>
             <option value="Tonga">Tonga</option>
             <option value="Trinidad and Tobago">Trinidad and Tobago</option>
@@ -308,54 +300,72 @@
             <option value="Vietnam">Vietnam</option>
             <option value="Yemen">Yemen</option>
             <option value="Zambia">Zambia</option>
-            <option value="Zimbabwe">Zimbabwe</option></select
-          ><br /><br />
+            <option value="Zimbabwe">Zimbabwe</option>
+          </select>
+          <br /><br />
 
-          <!-- Preferred Learning Mode -->
-          <label for="learningMode">Preferred Learning Mode:</label><br />
+          <!-- City -->
+          <label for="city">City:</label><br />
           <input
-            type="radio"
-            id="online"
-            name="learningMode"
-            value="online"
+            type="text"
+            id="city"
+            name="city"
+            placeholder="Enter your city"
             required
-          />
-          <label for="online">Online</label><br />
-          <input
-            type="radio"
-            id="inPerson"
-            name="learningMode"
-            value="inPerson"
-          />
-          <label for="inPerson">In Person</label><br /><br />
+          /><br /><br />
 
-          <!-- Why Apply -->
-          <label for="reason">Why do you want to apply?</label><br />
+          <!-- How Did You Hear About Us? -->
+          <label for="howDidYouHear">How did you hear about us?</label><br />
           <textarea
-            id="reason"
-            name="reason"
+            id="howDidYouHear"
+            name="howDidYouHear"
+            placeholder="Share how you heard about us"
             rows="4"
-            cols="50"
-            placeholder="Tell us why you want to apply"
             required
           ></textarea
           ><br /><br />
 
-          <!-- Terms and Conditions -->
-          <label>
-            <input type="checkbox" id="terms" name="terms" required />
-            I agree to the <a href="terms.html">terms and conditions</a> </label
-          ><br /><br />
+          <!-- Password -->
+          <label for="password">Password:</label><br />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+          /><br /><br />
+
+          <!-- Confirm Password -->
+          <label for="confirmPassword">Confirm Password:</label><br />
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            placeholder="Confirm your password"
+            required
+          /><br /><br />
+
+          <!-- Agreement Checkbox -->
+          <input
+            type="checkbox"
+            id="termsAndConditions"
+            name="termsAndConditions"
+            required
+          />
+          <label for="termsAndConditions">
+            I have read and accepted the terms and conditions.
+          </label>
+          <br /><br />
 
           <!-- Submit Button -->
-          <button type="submit">Submit</button>
+          <input type="submit" value="Submit" />
         </form>
       </section>
     </main>
 
-    <!-- Footer section containing footer content -->
-    <footer id="main-footer">
-      <p>&copy; 2024 AltSchool Africa. All rights reserved.</p>
+    <!-- Footer section -->
+    <footer>
+      <p>Application form built by Khadijah | <a href="#top">Back to top</a></p>
     </footer>
   </body>
 </html>

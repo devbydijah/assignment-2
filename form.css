@@ -1,85 +1,157 @@
-/* Application Form Page CSS */
+/* General styles for the entire document */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #fdf5f8; /* Light pastel pink background */
+  color: #333;
+  padding-top: 60px; /* To avoid content going under the sticky nav */
+}
+
+/* Sticky Navigation Bar */
+header nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffccd5; /* Pastel pink for the nav background */
+  border-bottom: 2px solid #f082ac;
+  padding: 15px 0;
+  z-index: 1000;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+header nav ul li {
+  margin: 0 20px;
+}
+
+header nav ul li a {
+  color: #4b0082; /* Deep purple for contrast */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+}
+
+header nav ul li a:hover {
+  background-color: #f082ac; /* Light pastel pink hover */
+  color: #fff; /* Text changes to white on hover */
+  border-radius: 5px;
+}
+
+/* Main section styling */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #4b0082; /* Deep purple for labels */
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+form input[type="password"],
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form textarea {
+  background-color: #fff; /* White background for inputs and textarea */
+}
+
+form input[type="submit"] {
+  background-color: #4b0082; /* Deep purple for the submit button */
+  color: #fff;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+}
+
+form input[type="submit"]:hover {
+  background-color: #f082ac; /* Light pastel pink hover effect for the submit button */
+}
+
+/* Footer styling */
+footer {
+  background-color: #4b0082;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #ffccd5;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
   }
-  
-  #header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+
+  header nav ul li {
+    margin: 10px 0;
   }
-  
-  #header h1 {
-    margin: 0;
-    font-size: 2rem;
-  }
-  
-  #main-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-  }
-  
-  #main-nav li {
-    margin: 0 15px;
-  }
-  
-  #main-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s;
-  }
-  
-  #main-nav a:hover {
-    color: #d6cfcf;
-  }
-  
-  #main-content {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-  }
-  
-  form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  input, select, textarea {
-    width: 100%;
+
+  main {
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 15px;
   }
-  
-  input[type="submit"] {
-    background-color: #555;
-    color: #fff;
-    border: none;
+
+  form {
     padding: 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
   }
-  
-  input[type="submit"]:hover {
-    background-color: #666;
+
+  form label {
+    font-size: 0.9rem;
   }
-  
-  label {
-    font-weight: bold;
+
+  form input,
+  form select,
+  form textarea {
+    font-size: 0.9rem;
   }
-  
+
+  form input[type="submit"] {
+    padding: 12px;
+  }
+}

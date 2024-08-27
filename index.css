@@ -1,94 +1,123 @@
-/* Home Page CSS */
+/* General styles for the entire document */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #fdf5f8; /* Light pastel pink background */
   color: #333;
-  background-color: #f4f4f9; /* Soft light gray */
-  margin: 0;
-  padding: 0;
+  padding-top: 60px; /* To avoid content going under the sticky nav */
 }
 
-#header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+/* Sticky Navigation Bar */
+header nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffccd5; /* Pastel pink for the nav background */
+  border-bottom: 2px solid #f082ac;
+  padding: 15px 0;
+  z-index: 1000;
 }
 
-#header h1 {
-  margin: 0;
-  font-size: 2rem;
-}
-
-#main-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+header nav ul {
   display: flex;
   justify-content: center;
+  list-style: none;
 }
 
-#main-nav li {
-  margin: 0 15px;
+header nav ul li {
+  margin: 0 20px;
 }
 
-#main-nav a {
-  color: #fff;
+header nav ul li a {
+  color: #4b0082; /* Deep purple for contrast */
   text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-#main-nav a:hover {
-  color: #d6cfcf; /* Light grayish pink */
+header nav ul li a:hover {
+  background-color: #f082ac; /* Light pastel pink hover */
+  color: #fff; /* Text changes to white on hover */
+  border-radius: 5px;
 }
 
-#main-content {
+/* Main section styling */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 20px;
-  max-width: 1200px;
-  margin: auto;
 }
 
-.section-title {
-  font-size: 1.5rem;
-  color: #444;
-  border-bottom: 2px solid #ddd;
+section h2, section h3 {
+  color: #4b0082; /* Consistent deep purple headings */
+  border-bottom: 3px solid #f082ac;
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
 
-.text-content {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #555;
+section p {
+  margin-bottom: 20px;
+  line-height: 1.8;
 }
 
-#profile-picture img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+/* Links styling */
+a {
+  color: #ff6f91; /* Soft pastel purple-pink for links */
+  text-decoration: none;
 }
 
-#profile-picture picture {
-  margin-top: 20px;
+a:hover {
+  color: #f082ac;
+  text-decoration: underline;
 }
 
-#profile-picture img {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#frontend-engineering, #background-music, #embedded-content {
-  margin-top: 30px;
-}
-
-video, audio {
+/* Footer styling */
+footer {
+  background-color: #4b0082;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
   width: 100%;
-  max-width: 600px;
-  display: block;
-  margin: 20px auto;
 }
 
-iframe {
-  display: block;
-  margin: 20px auto;
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #ffccd5;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  section h2, section h3 {
+    font-size: 1.5rem;
+  }
+
+  section p {
+    font-size: 1rem;
+  }
 }
